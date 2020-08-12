@@ -32,6 +32,10 @@
 			<label>내용</label>
 			<p>${detail.content}</p>
 		</div>
+		<div class="form-group">
+			<label>첨부파일</label>
+			<p><a href="/fileDown/${files.bno}">${files.fileOriName}</a></p>
+		</div>
 <!-- 		<button type="submit" class="btn btn-primary">작성</button> -->
 	</form>
 </div>

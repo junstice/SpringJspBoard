@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.board.domain.BoardVO;
+import com.example.demo.board.domain.FileVO;
 import com.example.demo.board.mapper.BoardMapper;
 
 @Service("com.example.demo.board.service.BoardService")
@@ -33,6 +34,16 @@ public class BoardService {
 	// 작성
 	public void boardInsertService(BoardVO board) throws Exception {
 		boardMapper.boardInsert(board);
+	}
+	
+	// 파일 업로드
+	public void fileInsertService(FileVO file) throws Exception {
+		boardMapper.fileInsert(file);
+	}
+	
+	// 파일 업로드
+	public FileVO fileDetailService(int bno) throws Exception {
+		return boardMapper.fileDetail(bno);
 	}
 	
 	// 수정
